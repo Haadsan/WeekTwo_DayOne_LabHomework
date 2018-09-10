@@ -4,7 +4,7 @@ require_relative('../sports_team')
 
 class TestSportsTeam < Minitest::Test
 
-  
+
   def setup
     @sports_team = SportsTeam.new("Chelsea", ["Eden Hazard", "Mateo", "Olivier Giroud"], "Maurizio Sarri")
 
@@ -50,21 +50,21 @@ class TestSportsTeam < Minitest::Test
   # end
 
 
-def test_add_player
-assert_equal(["Eden Hazard", "Mateo", "Olivier Giroud", "William"], @sports_team.add_player("William"))
+  def test_add_player
+    assert_equal(["Eden Hazard", "Mateo", "Olivier Giroud", "William"], @sports_team.add_player("William"))
 
-end
+  end
 
-def test_player_name
-assert_equal(true, @sports_team.player_name("Mateo"))
-end
+  def test_player_name
+    assert_equal(true, @sports_team.player_name("Mateo"))
+  end
 
-def test_team_point_wins
-     assert_equal(4, @sports_team.points(true))
-   end
+  def test_team_point_wins
+    assert_equal(4, @sports_team.points(true))
+  end
 
-def test_team_point_loss
-      assert_equal(0, @sports_team.points(false))
-    end
+  def test_team_point_loss
+    assert_equal(0, @sports_team.points(false))
+  end
 
 end

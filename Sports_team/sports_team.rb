@@ -40,21 +40,21 @@ class SportsTeam
   #   @coach = name
   # end
 
-def add_player(name)
-  @players << name
-end
-
-def player_name(name)
- return @players.include?(name)
-end
-
-
-def points(result)
-  if result == true
-    @points += 4
-else result == false
-  @points += 0
+  def add_player(name)
+    @players << name
   end
-end
+
+  def player_name(name)
+    return @players.include?(name)
+  end
+
+
+  def points(result)
+    if result == true
+      @points += 4
+    else result == false
+      @points += 0
+    end
+  end
 
 end
